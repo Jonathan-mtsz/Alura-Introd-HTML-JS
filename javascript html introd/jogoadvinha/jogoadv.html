@@ -1,0 +1,44 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br>");
+        document.write("<br>");
+}
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+}
+
+    function sorteia(n) {
+
+        return Math.round(Math.random() * n);
+    }
+    
+
+
+ var numeromagico = sorteia(10);
+
+ var tentativas = 1;
+
+
+while (tentativas <= 3 ) {
+    var chute = parseInt(prompt("Qual numero você acha que é o numero magico?"));
+    if (chute == numeromagico) {
+        mostra("voce acertou, o numero magico era " + numeromagico);
+        //break é uma função que termina o loop, ela força o fim dele
+        break;
+        //tambem pode ser feito aumentando o numero de tentativas para acima do limite
+        // terminando o loop
+    } else {
+        mostra ("voce errou! Tente novamente");
+    } 
+
+    tentativas++;
+}
+
+</script>

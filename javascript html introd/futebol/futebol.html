@@ -1,0 +1,42 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br>");
+        document.write("<br>");
+}
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+}
+
+function nometime(nome) {
+   return  "'" + nome + "'"
+}
+
+var nome = nometime (prompt ("Qual o nome do seu time?"));
+var vitorias = parseInt (prompt("Qual o numero de vitorias?"));
+var empates = parseInt (prompt("Qual o numero de empates?"));
+
+var pontos = vitorias * 3 + empates;
+
+mostra("Os pontos totais do time " + nome + " são " + pontos);
+
+if (pontos > 28) {
+    mostra("Seu time está melhor");
+}
+
+if (pontos < 28) {
+    mostra("sei tmie piorou :c");
+}
+
+if (pontos == 28) {
+    mostra("ta na mesma");
+}
+
+mostra("CABOU")
+</script>

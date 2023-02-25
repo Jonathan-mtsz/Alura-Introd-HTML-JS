@@ -1,0 +1,35 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br>");
+        document.write("<br>");
+}
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+}
+
+var totalFam = parseInt(prompt("Total de familiares?"));
+
+var cont = 0
+var totalIdades = 0;
+
+//0 conta como numero então quando a relação for uma contagem de 1 pra cima
+// use <(menor) ao inves de <=(menor-igual), porque se usar so o <=(menor-igual)
+// acontecerá uma repetição adicional porque o programa conta como 0,1,2,3 e nao 1,2,3
+while (cont < totalFam) {
+    var idade = parseInt(prompt("Informe a idade do familiar: "));
+    cont++;
+    totalIdades = totalIdades + idade;
+
+}
+
+var media = totalIdades/totalFam;
+
+mostra("deu " + media);
+</script>
